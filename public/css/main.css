@@ -1,0 +1,29 @@
+body
+{
+ background: #f5f5f5;
+}
+.brdrd
+{
+    border-radius: 0px;
+}
+.boxch
+{
+   box-shadow: aquamarine ;
+   box-sizing: border-box;
+}
+.hy {
+    /* position: absolute; */
+    right: 0;
+    bottom: -22px;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+    padding-bottom: 10px;
+}
