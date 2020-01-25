@@ -71,7 +71,7 @@
             <div class="card border-primary text-center shadow-lg">
                 <div class="card-header bg-primary">للتواصل مع الوسيط</div>
                 <div class="card-body text-right">
-                      <label>اسم الوسيط :</label> <label>{{ $flyer->user->name}}</label>
+                      <label>اسم الوسيط :</label> <label><a href="/user/{{ $flyer->user->id}}">{{ $flyer->user->name}}</a></label>
                       <img src="{{url('/storage/flyer/15798662701.jpg')}}" width="100%">
                       <label>البريدالالكتلروني :</label> <label>{{ $flyer->user->email}}</label><br>
                       <label>رقم الهاتف :</label> <label>{{ $flyer->user->phone}}</label>
