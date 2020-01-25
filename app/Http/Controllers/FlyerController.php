@@ -107,6 +107,7 @@ class FlyerController extends Controller
         $flyer->area=$request->area;
         $flyer->price=$request->price;
         $flyer->address=$request->address;
+        $flyer->contract=$request->contract;
         if ($request->image)
         {
             foreach($request->image as $image){
