@@ -27,3 +27,11 @@ body
     list-style: none;
     padding-bottom: 10px;
 }
+.alert {
+    position: fixed;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    bottom: 0px;
+}
