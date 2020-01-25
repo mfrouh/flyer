@@ -68,7 +68,8 @@
                      </a>
                      <div class="card-footer bg-success  text-right" style="font-size: smaller;">
                         <label>السعر:</label> {{$flyer->price}}  <label>جنية</label><br>
-                        <label>المساحة:</label> {{$flyer->area}}  <label>متر</label>
+                        <label>المساحة:</label> {{$flyer->area}}  <label>متر</label><br>
+                        <label>نوع العقار:</label> {{$flyer->category->name}}
                      </div>
                    </div>
                </div>

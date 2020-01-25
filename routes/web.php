@@ -22,5 +22,6 @@ Auth::routes();
 Route::resource('category', 'CategoryController');
 Route::resource('flyer', 'FlyerController');
 Route::get('/', 'PageController@mainpage');
+Route::get('/user/{id}', 'PageController@user');
 
 Route::get('/home', 'HomeController@index')->name('home');
