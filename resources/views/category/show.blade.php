@@ -12,6 +12,7 @@
                     <div class="form-group">
                        <label for="">نوع العقد</label>
                        <select class="form-control" name='contract' id="">
+                            <option value="">اختار نوع العقد</option>
                             <option value="sell">بيع</option>
                             <option value="rent">ايجار</option>
                        </select>
@@ -59,7 +60,7 @@
         </div>
         <div class="col-lg-9">
             <div class="row">
-              @foreach ($flyers as $flyer)
+              @forelse ($flyers as $flyer)
                <div class="col-lg-4 mb-5">
 
                    <div class="card border-success  shadow-lg">
@@ -73,7 +74,9 @@
                      </div>
                    </div>
                </div>
-              @endforeach
+               @empty
+               @include('message.notfound')
+               @endforelse
             </div>
             {{$flyers->links()}}
         </div>
