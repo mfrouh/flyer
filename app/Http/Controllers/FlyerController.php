@@ -81,7 +81,14 @@ class FlyerController extends Controller
      */
     public function edit(flyer $flyer)
     {
-        return view('flyer.edit',compact('flyer'));
+        if(auth()->user()->id==$flyer->user_id)
+        {
+            return view('flyer.edit',compact('flyer'));
+        }
+        else
+        {
+            return abort(401);
+        }
     }
 
     /**
@@ -101,6 +108,8 @@ class FlyerController extends Controller
             'image'=>'array',
             'address'=>'required',
         ]);
+        if(auth()->user()->id==$flyer->user_id)
+        {
         $flyer->category_id=$request->category_id;
         $flyer->user_id=auth()->user()->id;
         $flyer->description=$request->description;
@@ -117,6 +126,11 @@ class FlyerController extends Controller
         }
         $flyer->save();
         return redirect('/flyer');
+       }
+       else
+       {
+           return abort(404);
+       }
     }
 
     /**
@@ -127,7 +141,15 @@ class FlyerController extends Controller
      */
     public function destroy(flyer $flyer)
     {
-        $flyer->delete();
-        return back();
+        if(auth()->user()->id==$flyer->user_id)
+        {
+            $flyer->delete();
+            return back();
+        }
+        else
+        {
+            return abort(401);
+        }
+
     }
 }
