@@ -12,6 +12,10 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        return $this->middleware(['auth'])->except(['show']);
+    }
     public function index()
     {
         return view('category.index');

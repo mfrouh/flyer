@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="card border-primary text-center shadow-lg mt-5">
-                <div class="card-header bg-primary">اماكن لها علاقة</div>
+                <div class="card-header bg-primary"> لها علاقة</div>
                 <div class="card-body text-right">
 
                 </div>
