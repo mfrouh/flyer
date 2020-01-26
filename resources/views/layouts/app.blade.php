@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="position: fixed;width: 100%;z-index: 9;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                   عقارات
@@ -74,7 +74,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-8" style="padding-top: 5rem!important;">
                 @include('message.message')
                 @yield('content')
         </main>
