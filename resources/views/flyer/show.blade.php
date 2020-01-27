@@ -80,7 +80,10 @@
             <div class="card border-primary text-center shadow-lg mt-5">
                 <div class="card-header bg-primary"> لها علاقة</div>
                 <div class="card-body text-right">
-
+                    {{-- {{dd($flyers)}} --}}
+                  @foreach ($flyers as $flyer)
+                     <h3> {{$flyer->price}} / {{$flyer->area}} / {{$flyer->category->name}} </h3>
+                  @endforeach
                 </div>
             </div>
         </div>

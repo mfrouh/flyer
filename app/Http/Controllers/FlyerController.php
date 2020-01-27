@@ -74,7 +74,8 @@ class FlyerController extends Controller
      */
     public function show(flyer $flyer)
     {
-        return view('flyer.show',compact('flyer'));
+        $flyers=flyer::where('id','!=',$flyer->id)->where('category_id',$flyer->category_id)->where('area','>',$flyer->area-100)->where('area','<',$flyer->area+100)->get();
+        return view('flyer.show',compact(['flyer','flyers']));
     }
 
     /**
