@@ -25,6 +25,8 @@ class CreateFlyersTable extends Migration
             $table->enum('contract',['sell','rent']);
             $table->text('description');
             $table->string('image');
+            $table->unsignedBigInteger('city_id');
+            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

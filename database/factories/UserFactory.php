@@ -3,6 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\category;
+use App\city;
 use App\User;
 use App\flyer;
 use Faker\Generator as Faker;
@@ -34,10 +35,16 @@ $factory->define(category::class, function (Faker $faker) {
         'name' => $faker->name,
     ];
 });
+$factory->define(city::class, function (Faker $faker) {
+    return [
+        'name' => $faker->city,
+    ];
+});
 $factory->define(flyer::class, function (Faker $faker) {
     return [
         'category_id' => category::all()->random()->id,
         'user_id' => User::all()->random()->id,
+        'city_id' => city::all()->random()->id,
         'address'=>$faker->address,
         'description'=>$faker->text(400),
         'price'=>rand(200000,4000000),
