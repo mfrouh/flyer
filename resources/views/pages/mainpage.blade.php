@@ -36,13 +36,13 @@
                          <select class="form-control col-lg-6" name='min_price' id="">
                               <option value="">اقل سعر</option>
                               @for ($i = 1; $i < 20; $i++)
-                                  <option value="{{$i}}00000">{{$i}}00.000 جنية</option>
+                                  <option value="{{$i}}00000">{{number_format($i.'00000',0)}} جنية</option>
                               @endfor
                          </select>
                          <select class="form-control col-lg-6" name='max_price' id="">
                              <option value="">اكثر سعر</option>
                               @for ($i = 2; $i < 21; $i++)
-                                  <option value="{{$i}}00000">{{$i}}00.000 جنية</option>
+                                  <option value="{{$i}}00000">{{number_format($i.'00000',0)}} جنية</option>
                               @endfor
                          </select>
                     </div>

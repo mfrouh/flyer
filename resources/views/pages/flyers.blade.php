@@ -9,7 +9,7 @@
                       <img class="card-img-top" src="{{url('/storage/flyer')}}/{{json_decode($flyer->image)[0]}}"  height="200px">
                    </a>
                    <div class="card-footer bg-primary  text-right" style="font-size: smaller;">
-                     <label>السعر:</label> {{$flyer->price}}  <label>جنية</label><br>
+                     <label>السعر:</label> {{number_format($flyer->price,0)}}  <label>جنية</label><br>
                      <label>المساحة:</label> {{$flyer->area}}  <label>متر</label><br>
                      <label>نوع العقار:</label> {{$flyer->category->name}}
                    </div>

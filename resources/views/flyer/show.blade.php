@@ -45,7 +45,7 @@
                             </tr>
                             <tr>
                                 <th><label>السعر:</label></th>
-                                <th> <label>{{$flyer->price}}</label>   <label>جنية</label></th>
+                                <th> <label>{{number_format($flyer->price,0)}}</label>   <label>جنية</label></th>
                                 <th><label>المساحة:</label></th>
                                 <th> <label>{{$flyer->area}}</label>   <label>متر</label></th>
                             </tr>
@@ -89,7 +89,7 @@
                         </div>
                         <div class="col-lg-9">
                             <h6>{{$flyer->category->name}}</h6>
-                            <label style="font-size: smaller">السعر:  </label> <label style="font-size: smaller"> {{$flyer->price}} </label> <label style="font-size: smaller">جنية</label><br>
+                            <label style="font-size: smaller">السعر:  </label> <label style="font-size: smaller"> {{number_format($flyer->price,0)}} </label> <label style="font-size: smaller">جنية</label><br>
                             <label style="font-size: smaller">المساحة:</label> <label style="font-size: smaller"> {{$flyer->area}}  </label> <label style="font-size: smaller">متر</label><br>
                         </div>
                      </div>
