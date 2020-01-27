@@ -74,8 +74,14 @@ class FlyerController extends Controller
      */
     public function show(flyer $flyer)
     {
-        $flyers=flyer::where('id','!=',$flyer->id)->where('category_id',$flyer->category_id)->where('city_id',$flyer->city_id)->take(4)->get();
-        return view('flyer.show',compact(['flyer','flyers']));
+        $flyers=flyer::where('id','!=',$flyer->id)->where('category_id',$flyer->category_id)->where('city_id',$flyer->city_id)->get();
+        $price=array(); $area=array();
+        foreach ($flyers as $key => $f) {
+          $area[  abs($f->area-$flyer->area)]=$f;
+          $price[ abs($f->price-$flyer->price)]=$f;
+        }
+        ksort($price); ksort($area);
+        return view('flyer.show',compact(['flyer','flyers','area','price']));
     }
 
     /**

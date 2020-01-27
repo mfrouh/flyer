@@ -80,8 +80,7 @@
             <div class="card border-primary text-center shadow-lg mt-5">
                 <div class="card-header bg-primary"> لها علاقة</div>
                 <div class="card-body text-right">
-                    {{-- {{dd($flyers)}} --}}
-                  @foreach ($flyers as $flyer)
+                  @foreach ($price as $flyer)
                    <a href="/flyer/{{$flyer->id}}" style="text-decoration: none" class=" text-body">
                      <div class="row p-2 shadow-sm" >
                         <div class="col-lg-3 border-danger p-0">
