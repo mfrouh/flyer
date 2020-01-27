@@ -78,9 +78,28 @@
                 </div>
             </div>
             <div class="card border-primary text-center shadow-lg mt-5">
-                <div class="card-header bg-primary"> لها علاقة</div>
+                <div class="card-header bg-primary">لها علاقة بالسعر</div>
                 <div class="card-body text-right">
-                  @foreach ($price as $flyer)
+                  @foreach (array_slice($price, 0, 3) as $flyer)
+                   <a href="/flyer/{{$flyer->id}}" style="text-decoration: none" class=" text-body">
+                     <div class="row p-2 shadow-sm" >
+                        <div class="col-lg-3 border-danger p-0">
+                            <img class="card-img-top" src="{{url('/storage/flyer')}}/{{json_decode($flyer->image)[0]}}" width="100%" height="70px">
+                        </div>
+                        <div class="col-lg-9">
+                            <h6>{{$flyer->category->name}}</h6>
+                            <label style="font-size: smaller">السعر:  </label> <label style="font-size: smaller"> {{number_format($flyer->price,0)}} </label> <label style="font-size: smaller">جنية</label><br>
+                            <label style="font-size: smaller">المساحة:</label> <label style="font-size: smaller"> {{$flyer->area}}  </label> <label style="font-size: smaller">متر</label><br>
+                        </div>
+                     </div>
+                   </a>
+                  @endforeach
+                </div>
+            </div>
+            <div class="card border-primary text-center shadow-lg mt-5">
+                <div class="card-header bg-primary">لها علاقة بالمساحة</div>
+                <div class="card-body text-right">
+                  @foreach (array_slice($area, 0, 3) as $flyer)
                    <a href="/flyer/{{$flyer->id}}" style="text-decoration: none" class=" text-body">
                      <div class="row p-2 shadow-sm" >
                         <div class="col-lg-3 border-danger p-0">
