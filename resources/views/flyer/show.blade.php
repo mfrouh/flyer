@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8">
-            <div class="card border-primary text-center shadow-lg">
-                <div class="card-header bg-primary"></div>
+            <div class="card  text-center ">
+                <div class="card-header bg-yellow"></div>
                 <div class="card-body text-right">
                     <label>الصور</label>
                     <div id="demo" class="carousel slide" data-ride="carousel" >
@@ -68,8 +68,8 @@
             </div>
         </div>
         <div class="col-lg-4">
-            <div class="card border-primary text-center shadow-lg">
-                <div class="card-header bg-primary">للتواصل مع الوسيط</div>
+            <div class="card  text-center ">
+                <div class="card-header bg-yellow">للتواصل مع الوسيط</div>
                 <div class="card-body text-right">
                       <label>اسم الوسيط :</label> <label><a href="/user/{{ $flyer->user->id}}">{{ $flyer->user->name}}</a></label>
                       <img src="{{url('/storage/flyer/15798662701.jpg')}}" width="100%">
@@ -77,8 +77,8 @@
                       <label>رقم الهاتف :</label> <label>{{ $flyer->user->phone}}</label>
                 </div>
             </div>
-            <div class="card border-primary text-center shadow-lg mt-5">
-                <div class="card-header bg-primary">لها علاقة بالسعر</div>
+            <div class="card  text-center  mt-5">
+                <div class="card-header bg-yellow">لها علاقة بالسعر</div>
                 <div class="card-body text-right">
                   @foreach (array_slice($price, 0, 3) as $flyer)
                    <a href="/flyer/{{$flyer->id}}" style="text-decoration: none" class=" text-body">
@@ -96,8 +96,8 @@
                   @endforeach
                 </div>
             </div>
-            <div class="card border-primary text-center shadow-lg mt-5">
-                <div class="card-header bg-primary">لها علاقة بالمساحة</div>
+            <div class="card  text-center mt-5">
+                <div class="card-header bg-yellow">لها علاقة بالمساحة</div>
                 <div class="card-body text-right">
                   @foreach (array_slice($area, 0, 3) as $flyer)
                    <a href="/flyer/{{$flyer->id}}" style="text-decoration: none" class=" text-body">

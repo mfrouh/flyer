@@ -5,8 +5,8 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-3">
-            <div class="card border-primary">
-              <div class="card-header bg-primary text-center">بحث</div>
+            <div class="card ">
+              <div class="card-header bg-yellow text-center">بحث</div>
               <div class="card-body text-right">
                  <form action="">
                    <div class="form-group">
@@ -65,7 +65,7 @@
                    </div>
                  </div>
                    <div class="form-group text-center">
-                    <button type="submit" class="btn btn-primary">بحث</button>
+                    <button type="submit" class="btn btn-outline-success">بحث</button>
                    </div>
                  </form>
               </div>

@@ -94,16 +94,16 @@ body
 }
 .bg-yellow
 {
-    background:rgb(255, 68, 93);
+    background:rgb(47, 56, 125);
 }
 .btn-outline-success {
-    color: rgb(184, 0, 144);
+    color: rgb(47, 56, 125);
     background-color: transparent;
     background-image: none;
-    border-color: rgb(184, 0, 144);
+    border-color: rgb(47, 56, 125);;
 }
 .btn-outline-success:hover {
-background:rgb(184, 0, 144);
+background:rgb(47, 56, 125);
 color: white;
 }
 .boxch
