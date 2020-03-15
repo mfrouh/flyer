@@ -11,17 +11,10 @@
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-Route::get('/test', function () {
-    return view('test');
-});
 
 Auth::routes();
 Route::resource('category', 'CategoryController');
 Route::resource('flyer', 'FlyerController');
 Route::get('/', 'PageController@mainpage');
 Route::get('/user/{id}', 'PageController@user');
-
 Route::get('/home', 'HomeController@index')->name('home');

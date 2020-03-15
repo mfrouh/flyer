@@ -19,6 +19,6 @@
                 @include('message.notfound')
             @endforelse
         </div>
-    {{$flyers->links()}}
+    {{$flyers->appends(Request::except('page'))->links()}}
    </div>
   </div>
