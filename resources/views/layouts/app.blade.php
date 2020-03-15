@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="position: fixed;width: 100%;z-index: 9;">
+        <nav class="navbar navbar-expand-md navbar-light bg-yellow shadow-sm" style="position: fixed;width: 100%;z-index: 9;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                   عقارات
